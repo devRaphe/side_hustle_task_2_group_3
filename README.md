@@ -1,4 +1,4 @@
 # sidehustle_task_3
 
 
-![flutter_01](https://user-images.githubusercontent.com/72768624/141481531-890f779d-a872-42cb-b32c-a1ac43df0e39.png)
+![flutter_02](https://github.com/devRaphe/side_hustle_task_2_group_3/blob/main/flutter_02.png?raw=true)
