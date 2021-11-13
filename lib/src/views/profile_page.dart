@@ -53,20 +53,10 @@ class ProfilePage extends StatelessWidget {
                             SizedBox(
                               height: 5,
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 8, right: 8),
-                              child: Text(
-                                'etiabasiezekiel@ymail.com',
-                                style: kGeneralTextStyle,
-                              ),
+                            SubDetails(
+                              content: 'etiabasiezekiel@ymail.com',
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 8, right: 8),
-                              child: Text(
-                                'Graduate 🌚',
-                                style: kGeneralTextStyle,
-                              ),
-                            ),
+                            SubDetails(content: 'Graduate 🌚')
                           ],
                         ),
                       )
@@ -105,7 +95,7 @@ class ProfilePage extends StatelessWidget {
                 title: 'Focus Mode',
               ),
               const ReusableListile(
-                leadingIcon: Icons.redo,
+                leadingIcon: Icons.next_plan_rounded,
                 title: 'School Schedule',
               ),
               const ReusableListile(
@@ -115,6 +105,25 @@ class ProfilePage extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class SubDetails extends StatelessWidget {
+  final String content;
+  const SubDetails({
+    Key? key,
+    required this.content,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 8, right: 8),
+      child: Text(
+        content,
+        style: kGeneralTextStyle,
       ),
     );
   }
@@ -133,7 +142,7 @@ class ReusableListile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.only(bottom: 15),
+      margin: const EdgeInsets.only(bottom: 15),
       elevation: 0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
